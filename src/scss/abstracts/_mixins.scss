@@ -1,0 +1,14 @@
+@use './variables' as *;
+
+@mixin setBoxBackground($color) {
+  background-color: $color;
+  color: setContentColor($color);
+}
+// FUNCTIONS
+@function setContentColor($color){
+  @if(lightness($color) > 70) { 
+    @return $complementaryColor; 
+  } @else {
+    @return $primaryColor;
+  }
+}

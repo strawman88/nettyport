@@ -1,0 +1,22 @@
+@use '../../../scss/abstracts/' as *;
+
+// C. Propogation Example 2
+.light {
+  background-color: $primaryColor;
+  border-color: $complementaryColor;
+}
+
+.dark {
+  background-color: lighten($complementaryColor, 3%);
+  border-color: $primaryColor;
+}
+
+.accordionBox {
+  @extend %baseAccordionBox;
+  border-color: $complementaryColor;
+}
+
+.activeBox {
+  @extend .accordionBox;
+  border-color: $brandColor;
+}

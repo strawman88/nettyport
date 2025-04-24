@@ -1,0 +1,15 @@
+@use '../../scss/abstracts/' as *;
+  
+.btn {
+  @extend %baseBtn;
+
+  // color: $primaryColor;
+  @include setBoxBackground($brandColor);
+  background: linear-gradient(45deg, $brandSkewColor 0%, $brandColor 100%);
+
+  &:hover {
+    color: $complementaryColor;
+    background-color: $brandColor;
+    background: linear-gradient(225deg, $brandSkewColor 0%, $brandColor 100%);  
+  }
+}

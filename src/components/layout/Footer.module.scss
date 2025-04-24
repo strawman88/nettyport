@@ -1,0 +1,17 @@
+@use '../../scss/abstracts/' as *;
+
+.footer {
+  padding: 1rem;
+  text-align: center;
+}
+
+// C. Propogation Example 3
+.light {
+  color: $complementaryColor;
+  background-color: darken($primaryColor, 3%);
+}
+
+.dark {
+  color: $primaryColor;
+  background-color: darken($complementaryColor, 3%);
+}
